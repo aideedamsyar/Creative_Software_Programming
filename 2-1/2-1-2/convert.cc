@@ -5,38 +5,44 @@
 using namespace std;
 
 void convert_case(char* a) {
-    for (int i; *(a+i)!='\0'; i++) {
-        if(islower(*(a+i))){
-        a[i] = toupper(*(a+i));
-    } else {
-        a[i] = tolower(*(a+i));
-    }
+    while (*a) {
+        if (isalpha(*a)) {
+            if (islower(*a)) {
+                *a = toupper(*a);
+            } else {
+                *a = tolower(*a);
+            }
+        }
+        a++;
     }
 }
 
 int main() {
-    char* inputString = new char[100];
-    
-    while(true){
-        cin >> inputString;
-        
-        if(strcasecmp(inputString, "exit") == 0){
+    char* string = new char[100];
+
+    while (true) {
+        cin.getline(string, 100);
+
+        if (strcasecmp(string, "exit") == 0) {
             break;
         }
-        
-        for(int i=0; inputString[i] != '\0'; i++){
-            if(isalpha(inputString[i])){
-                convert_case(inputString);       
-                cout << inputString << endl;
-            } else {
+
+        bool validInput = true;
+        for (int i = 0; string[i]; i++) {
+            if (!isalpha(string[i])) {
                 cout << "Error: Wrong input!" << endl;
+                validInput = false;
                 break;
             }
         }
 
+        if (validInput) {
+            convert_case(string);
+            cout << string << endl;
+        }
     }
 
-    delete[] inputString;
+    delete[] string; 
 
     return 0;
 }
