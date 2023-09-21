@@ -1,6 +1,3 @@
-# 
-
-
 all: main shapes
 	g++ -o simple_shape main shapes
 

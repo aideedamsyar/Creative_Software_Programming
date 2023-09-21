@@ -23,4 +23,4 @@ class Rectangle {
         int xpos2, ypos2;
 };
 
-#endif //__SHAPE_H__
+#endif // __SHAPE_H__ 
