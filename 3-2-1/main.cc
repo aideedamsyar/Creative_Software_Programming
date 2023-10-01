@@ -27,7 +27,8 @@ int main() {
             cin >> from >> to >> amount;
             manager.transfer(from, to, amount);
         }
-        else if (input == 'Q') break;
+        else if (input == 'Q') 
+            break;
     }
     return 0;
 }
