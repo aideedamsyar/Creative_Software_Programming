@@ -20,13 +20,40 @@ class Shape {
     public:
         Shape();
         Shape(const size_t x, const size_t y, const char brush);
-        double GetArea() {};
-        int GetPerimeter() {};
+        double GetArea() {return (x*y); };
+        int GetPerimeter() {return (x+x+y+y); };
         void Draw(Canvas *canvas) const {};
-        protected: size_t x, y;
+
+    protected: size_t x, y;
         char brush; 
 };
+
 // Class Square
+
+class Square : public Shape {
+    int width, height;
+public: 
+    Square(int, int, int, char);
+    ~Square();
+    void Draw(Canvas*);
+    void Print();
+    double GetArea() const;      
+    int GetPerimeter() const;   
+};
+
+
 // Class Rectangle
+
+class Rectangle : public Shape {
+    int width, height;
+public:
+    Rectangle(int, int, int, int, char);
+    ~Rectangle();
+    void Draw(Canvas*);
+    void Print();
+    double GetArea() const;      
+    int GetPerimeter() const;    
+};
+
 
 #endif //__SHAPE_H__
