@@ -66,8 +66,6 @@ int Square::GetPerimeter() const {
     return 4 * width;  
 }
 
-
-
 Rectangle::Rectangle(int x, int y, int width, int height, char brush)
     : Shape(x, y, brush), width(width), height(height) {}
 
@@ -86,7 +84,6 @@ bool Canvas::DrawPixel(const int x, const int y, const char brush) {
     canvas[y][x] = brush;  
     return true;
 }
-
 
 void Rectangle::Draw(Canvas* canvas) {
     for (int i = 0; i < height; ++i) {
