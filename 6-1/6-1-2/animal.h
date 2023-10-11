@@ -8,8 +8,8 @@ class Animal {
     public:
         Animal(string _name, int _age);
         virtual ~Animal();
-        virtual void printInfo() = 0; // pure virtual function
-    protected:
+        virtual void printInfo() = 0; // Pure virtual function
+    protected:  
         string name;
         int age;
 };
@@ -33,6 +33,5 @@ class Cat : public Animal {
     private:
         string favToy;
 };
-
 
 #endif // __ANIMAL_H__

@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    Animal* animalArr[10];
+    Animal* animalArr[10]; 
 
     char animalType;
     int count = 0;
@@ -16,9 +16,9 @@ int main() {
         cin >> animalType;
         if (animalType == '0' || count == 10) break;
 
-        if (animalType == 'z'){
+        if (animalType == 'z') {
             cin >> name >> age >> numOfStripe;
-            Animal* zebra = new Zebra(name, age, numOfStripe);
+            Animal* zebra = new Zebra(name, age, numOfStripe); 
             animalArr[count] = zebra;
             count++;
         } else {
