@@ -24,6 +24,10 @@ Canvas::~Canvas() {
 }
 
 void Canvas::Resize(size_t w, size_t h) {
+    // 1. assign parameters to member variables
+    // 2. deallocate matrix (depth of j since it's 2D)
+    // 3. allocate memory for the new matrix with the new size (allocate a 1D array first - use pointer - to the column direction and then loop through each entry and creating another dimension row direction effectively creating a 2D array)
+    // 4. initialize with '.'
     this->row = w;
     this->col = h;
     for (size_t j = 0; j < col; ++j) {
