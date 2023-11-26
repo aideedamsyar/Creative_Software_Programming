@@ -1,11 +1,11 @@
-MyVector: main.o my_vector.o
+all: main.o my_vector.o
 	g++ -o MyVector main.o my_vector.o
 
-main.o:
-	g++ -c main.cpp
+main.o: main.cc
+	g++ -c -o main.o main.cc
 
-my_vector.o:
-	g++ -c my_vector.cpp
+my_vector.o: my_vector.cc my_vector.h
+	g++ -c -o my_vector.o my_vector.cc
 
 clean:
-	rm main.o my_vector.o MyVector
+	rm -f main.o my_vector.o MyVector
