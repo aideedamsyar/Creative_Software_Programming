@@ -66,6 +66,13 @@
         "set": "cpp",
         "unordered_set": "cpp",
         "__verbose_abort": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "deque": "cpp",
+        "iterator": "cpp",
+        "memory_resource": "cpp",
+        "fstream": "cpp",
+        "stack": "cpp",
+        "filesystem": "cpp",
+        "iomanip": "cpp"
     }
 }
