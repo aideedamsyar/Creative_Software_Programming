@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int int_size, double_size, string_size;
     cin >> int_size;
-MyContainer<int> int_container(int_size);
+    MyContainer<int> int_container(int_size);
     cin >> int_container;
     cout << int_container;
     int_container.clear();
